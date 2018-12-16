@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<meta charset="utf-8" />
+	<style>
+ @media screen and (max-width: 1020px) {
+
+    #container, #header, #content, #footer {
+    float: none;
+    width: auto;
+
+        }
+
+    .button
+    {
+        background-color: dimgrey;
+
+        padding: 25px 37px;
+        text-align: center;
+        color:antiquewhite;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 10px;
+    }
+    a:hover
+    {
+       background-color: yellowgreen;
+        color:dimgray;
+    }
+        
+.questionnaire{
+         background-color: dimgrey;
+         background-image: linear-gradient(antiquewhite,yellowgreen,antiquewhite);
+font-size:44px;        
+}
+.questions
+        {
+            //background-color: dimgrey;
+            font-size: 55px;
+            
+            
+        }
+    
+    .button
+    {
+        background-color: dimgrey;
+
+        padding: 20px 34px;
+        text-align: center;
+        color:antiquewhite;
+        text-decoration: none;
+        display:list-item;
+        border-radius: 10px;
+    }
+    a:hover
+    {
+       background-color: yellowgreen;
+        color:dimgray;
+    }
+
+       
+input[type=radio] {
+    width: 24px;
+    height: 24px;
+    padding: 2px,5px;
+}  
+input[type=range]
+        {
+           // border-color: red;
+		width:70px;
+		height:25px;
+        }
+input[type=text]
+        {
+	    padding: 5px,10px;
+            width:300px;
+            height: 50px;
+        }
+ input[type=email]
+        {
+	    padding:5px,10px;
+            width:300px;
+            height: 50px;
+        }       
+
+
+
+
+
+    //mobile settings go here
+
+}
+        body
+ {
+        background-repeat:no-repeat;
+        background-color:antiquewhite;
+ }
+    .button
+    {
+        background-color: dimgrey;
+
+        padding: 14px 25px;
+        text-align: center;
+        color:antiquewhite;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 10px;
+    }
+    a:hover
+    {
+       background-color: yellowgreen;
+        color:dimgray;
+    }
+        
+.questionnaire{
+         background-color: dimgrey;
+         background-image: linear-gradient(antiquewhite,yellowgreen,antiquewhite);
+         font-size: 22px;
+        }
+.questions
+        {
+            //background-color: dimgrey;
+            font-size: 30px;
+            
+            
+        }
+       
+input[type=radio] {
+    width: 22px;
+    height: 22px;
+    padding: 2px,5px;
+}  
+input[type=range]
+        {
+            border-color: red;
+        }
+input[type=text]
+        {
+            width:300px;
+            height: 50px;
+        }
+ input[type=email]
+        {
+            width:300px;
+            height: 50px;
+        }       
+
+        
+        
+	</style>
+</head>
+<body>
+<h1>
+hello <br>Please let me know what you think!
+</h1>
+
+    <div class='questionnaire'>
+        <form>
+        <!--
+        <lable id='nameLable' for='nameField'>name:</lable>
+        !-->
+        <input name='nameField' type='text' maxlength="25" placeholder="Name" required>
+                <!--
+        <lable id='emailLable' for='emailField'>Email:</lable>
+                !-->
+	<br>
+        <input name='emailField' type='email' maxlength='25' placeholder="Email        *not required">
+        <br>
+	<br>
+	<br>
+        <label >are you a: </label><br>
+            <input type="radio" name="gender" value="male"> Man
+            <input type="radio" name="gender" value="female"> Woman
+            <br>
+            <input type="radio" name="gender" value="other"> Other
+            <input type="radio" name="gender" value="alien" checked>Alien<br><br>
+        
+            <lable class="questions"> I am a</lable>
+            <br>
+            <input type="radio" name="work" value="Student"> Student
+            <input type="radio" name="work" value="Faculty"> Faculty<br>
+            <input type="radio" name="work" value="other"> Other
+            <br>
+            <br>
+
+        <lable class="questions">how do you feel today</lable>
+        <br>Dead<input type="range" name="healthScale" min="0" max="10">healthy
+        <br>
+        <br>
+            
+<lable class="questions" > The IR camera said:</lable>
+<br>
+    <input type="radio" name="IR_resp" value="fine" > I am not sick<br>
+    <input type="radio" name="IR_resp" value="sick"> I could be sick
+    <br>
+    <br>
+            
+        <lable class="questions">Is it easy to interact<br>with the IR camera?</lable>
+        <br>No<input type="range" name="UI_interaction" min="0" max="10">Yes
+        <br>
+        <br>
+            
+        <lable class="questions">Would you use this device<br>in a hospital?</lable>
+        <br>
+        <input type="radio" name="useDevice" value="yes"> Yes.
+        <input type="radio" name="useDevice" value="no"> No.
+        <input type="radio" name="useDevice" value="maybe"> If i felt i needed it.
+        <br>
+        <br>    
+            
+            
+        <lable class="questions">How reliable do you feel this device is?</lable>
+        <br>Not reliable<input type="range" name="reliability" min="0" max="10">Very reliable
+        <br>
+        <br>
+        
+        <lable class="questions">Is this device more handy than<br>a thermometer? </lable>
+        <br>
+        <input type="radio" name="btr_thn_orig" value="yes"> Yes.
+        <input type="radio" name="btr_thn_orig" value="no"> No.<br>
+        <input type="radio" name="btr_thn_orig" value="definitely not">
+        How dare you insult the thermometer like that!
+            <br>
+            <br>
+        
+        <lable class="questions">How long was your interaction with the camera?</lable>
+        <br>
+        1 second<input type="range" name= "learnability"
+                       min="1" max="60">a minute / longer
+        <br>
+        <br>
+            
+        
+        <lable class="questions"> Do you have any suggestions for improvement?</lable>
+        <br>
+        <input name='suggestions' type='text' placeholder="suggestions">
+            <br>
+            <br>
+        
+        <lable class="questions">Do you have any other comments/concerns?</lable>
+        <br>
+                <input name='comments' type='text' placeholder="comments">
+            <br>
+            <br>
+             
+         
+        </form></div>
+        
+        
+        
+    <div class='form-sub'>
+        <button class="button" id='subButton' type='button'>Submit!</button>
+
+	</div>
+
+        
+<br>
+<p>    
+    
+       <div>
+       <button class="button" id='backB'  type='button' onclick="goBack" >Go Back!</button>
+    </div>
+    
+    <script src ="/socket.io/socket.io.js"></script>
+    <div>
+<br><br><br></div>
+<script>
+	
+	var socket=io.connect();
+    
+//	socket.on('updateImg',function(e)
+//		{
+//			var data = e.data;
+//			console.log(data);
+//		});
+
+function sendData() {
+    
+   dataSet=getData();
+   console.log(dataSet);
+	//write me a letter
+   alert('Thank you!'); 
+	socket.emit('postFeedback',dataSet);
+}
+// use an eventlistener for the event
+var subButton = document.getElementById('subButton');
+subButton.addEventListener('click',sendData, false);
+    
+var goBack1=document.getElementById('backB');
+goBack1.addEventListener('click',goBack);
+
+
+//send data here
+
+function goBack()
+{
+    window.location.href='/';
+}
+    
+function getData()
+{ 
+    var allForms=document.forms[0];
+    var i;
+    var userName;
+    var userEmail;
+    var gender;
+    var workStatus;
+    var sickLevel;
+    var IR_resp;
+    
+    var interaction;
+    var hosp_use;
+    var reliability;
+    
+    var ThermCompare;
+    var learnable;
+    var sugg;
+    var comments;
+    
+    //alert(document.forms[0].childNodes.length);
+    
+
+    for(i=0;i<allForms.length;i++)
+    {
+            
+            var name = allForms[i].name;
+            
+            //alert(name);
+            if(name=="nameField")
+            {
+                userName=allForms[i].value;
+                //alert(userName);
+            }
+            if(name=="emailField")
+                {
+                    userEmail=allForms[i].value;
+                    
+                }
+                
+            if (name=="gender")
+            {
+                if(allForms[i].checked)
+                    {
+                        gender=allForms[i].value;
+                       // alert(gender);
+                    }
+            }
+        
+            if(name=="work")
+            {   if(allForms[i].checked)
+                {
+                    workStatus=allForms[i].value;
+                   // alert(workStatus);
+                }
+            }
+        
+            if(name == "healthScale")
+            {
+                
+                sickLevel=allForms[i].value;
+            }
+        
+            if(name =="IR_resp")
+            {
+                if(allForms[i].checked)
+                    {
+                        IR_resp=allForms[i].value;
+                        //alert(IR_resp);
+                    }
+            }
+        if(name=="UI_interaction")
+            {
+             interaction=allForms[i].value;   
+            }
+        if(name=="useDevice")
+            {
+                if(allForms[i].checked)
+                    {
+                        hosp_use=allForms[i].value;
+                    }
+            }
+        if(name=="reliability")
+            {
+                reliability=allForms[i].value;
+            }
+            if(name=="btr_thn_orig")
+                {
+                    if(allForms[i].checked)
+                        {
+                            ThermCompare=allForms[i].value;
+                        }
+                    
+                }
+        if(name == "learnability")
+        {
+            learnable=allForms[i].value;
+        }
+        if(name=="suggestions")
+            {
+                sugg=allForms[i].value;
+            }
+        if(name=="comments")
+            {
+                comments=allForms[i].value;
+            }
+    
+
+            
+    }
+    
+    	var dataSet={ "name":userName,
+                      "email":userEmail,
+                      "gender":gender,
+                      "work_status":workStatus,
+                      "sick_level":sickLevel,
+                      "IR_resp":IR_resp,
+                    "interaction": interaction,
+                     "useInHopsital": hosp_use,
+                     "reliable":reliability,
+                     "thermometerComp": ThermCompare,
+                     "learnable":learnable,
+                     "suggestions":sugg,
+                     "comments": comments
+                    };
+    
+    return dataSet;
+    
+}
+
+//send data here
+
+//socket.emit('clientEvent','attach fuckin data here');
+
+</script>
+    
+</body>
+</html>
+

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<meta charset="utf-8" />
+<style>
+    
+    @media screen and (max-width: 1020px) {
+  
+    #container, #header, #content, #footer {
+    float: none;
+    width: auto;
+  
+        }
+
+ .button,input[type=button]
+    {
+        background-color: dimgrey; 
+        
+        padding: 14px 25px;
+        text-align: center; 
+        color:antiquewhite;
+        text-decoration: none;
+        display:list-item;
+        border-radius: 10px;
+    }
+    a:hover
+    {
+       background-color: yellowgreen;
+        color:dimgray;
+    }
+    //mobile settings go here    
+    
+    //mobile settings go here    
+        
+}
+    
+ body
+ {
+        background-image: linear-gradient(white,yellowgreen,green,darkgreen);
+        background-repeat:no-repeat;
+        background-color:darkgreen;
+ }
+    a
+    {
+        background-color: dimgrey; 
+        
+        padding: 14px 25px;
+        text-align: center; 
+        color:antiquewhite;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 10px;
+    }
+    a:hover
+    {
+       background-color: yellowgreen;
+        color:dimgray;
+    }
+ .button,input[type=button]
+    {
+        background-color: dimgrey;
+
+        padding: 14px 25px;
+        text-align: center;
+        color:antiquewhite;
+        text-decoration: none;
+        display:list-item;
+        border-radius: 10px;
+    }
+    
+</style>
+    
+</head>
+<body>
+    
+<h1>
+How are you feeling?
+</h1>
+
+        <h1>IR Camera</h1>
+
+       
+
+	<canvas id="mcanvas" width = "320" height = "320">  </canvas>
+
+    
+ <div id="UI">      
+<p class="button" id ="temp"> Temperature: </p>
+<!--
+<p class="button" id="diag">possible Diagnosis</p>
+!-->
+
+
+<a class = "button" href = "http:./feedBack.html"> What do you think?</a>
+
+
+
+
+ <input class = "button" type="button" onClick="location.href=location.href"
+	value="Refresh!">
+
+
+</div>
+
+
+
+<script src="/socket.io/socket.io.js"></script>
+<!-- <script src="/http://code.jquery.com/jquery-1.11.1.js"></script>
+  !-->
+<script>
+	
+
+	var socket=io.connect();
+	var canvas = document.getElementById('mcanvas');
+	var tempShow=document.getElementById('temp');
+//	var refBtn=document.getElementById('refresher');
+
+	socket.on('message',function(data)
+		{
+			console.log(data.message);
+		});
+
+	socket.on('updateImg',function(e)
+	{
+
+        	data = JSON.parse(e.data);
+//        	console.log(data);
+//		console.log(data.temp);
+		reDraw(data.square,data.temp);			
+			
+	});
+
+function reDraw(square,temp)
+        {
+
+        var x=square.x;
+        var y=square.y;
+        var len = square.len
+        var color = square.color;
+        var pixelSpace=320/len;
+        var ctx = canvas.getContext('2d');
+        var xi;
+        var yi;
+	
+	tempShow.innerHTML=temp;            
+        for(xi=0; xi < len;xi++)
+        {
+                for(yi=0;yi<len;yi++)
+                {
+                        ctx.fillStyle=color[xi][yi];
+                        ctx.fillRect(
+                        x[xi]*pixelSpace,y[yi]*pixelSpace
+                                ,pixelSpace,pixelSpace);
+                }       
+        }
+}
+
+
+
+//refBtn.addEventListener('click',onRef,false);
+function onRef()
+{
+	window.location.reload(forceGet);
+}
+
+
+//send data here
+//socket.emit('clientEvent','attach fuckin data here');
+
+</script>
+
+</body>
+
+
+
+</html>
+
+
