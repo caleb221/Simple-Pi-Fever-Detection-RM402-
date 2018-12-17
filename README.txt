@@ -1,21 +1,5 @@
 Hello!
 
-Pre-requesite libraries:
-
-Python:
-  busio
-  json
-  numpy
-  scipy
-  board
-  colour
-  adafruit_amg88xx
-
-JavaScript:
-  express
-  socket.io
-  pyshell
-
 Here is a basic overview to what each code does.
 
 SensorRandom.py --> this code is the interface between sensor and raspberry pi.
@@ -30,5 +14,22 @@ index.html --> just as the name suggests, this is the main UI for the webapp, it
    using javascript as well as shows the user their diagnosis.
 feedBack.html --> Questionnaire used in a tiny reasearch project to collect user data concerning the webapp.
 
+feedBack_stats.py --> Statistical analysis done on feedback data for a class. Papers and whatnot are elsewhere, this is a code section.
+
+Pre-requesite libraries:
+Python:
+  busio
+  json
+  numpy
+  scipy
+  board
+  colour
+  adafruit_amg88xx
+  glob,matplotlib (STATISTICS PROGRAM ONLY)
+JavaScript:
+  express
+  socket.io
+  pyshell
+  
 Thanks for looking at my code!
 -Caleb
