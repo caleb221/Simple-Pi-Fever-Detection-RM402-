@@ -1,0 +1,26 @@
+
+how do you feel today
+Dead------healthy
+
+The IR camera said:
+()I am not sick
+()I could be sick
+
+Is it easy to interact
+with the IR camera?
+()No ()Yes
+
+Would you use this device
+in a hospital?
+()Yes. ()No. ()If i felt i needed it.
+
+How reliable do you feel this device is?
+Not reliable----------Very reliable
+
+Is this device more handy than
+a thermometer?
+()Yes. ()No.
+()How dare you insult the thermometer like that!
+
+How long was your interaction with the camera?
+1 second--------a minute / longer
