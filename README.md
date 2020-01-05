@@ -29,7 +29,7 @@ Flow Chart for whole System
 
 <img src = "https://github.com/caleb221/Simple-Pi-Fever-Detection-RM402-/blob/master/Img/SfFC_color.png" height="500" width="290">
 
-# Pre-requesite libraries:
+# Prerequisite libraries:
 Python:
 
 
