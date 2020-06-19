@@ -72,5 +72,10 @@ Questionnaire used in a tiny reasearch project to collect user data concerning t
 # feedBack_stats.py 
 Statistical analysis done on feedback data for a class. Papers and whatnot are elsewhere, this is a code section.
 
+
+# DISCLAIMER
+THIS SETUP AS IS SHOULD NOT BE USED IN A MEDICAL SETTING! THE ALGORITHM IS FAR TOO SIMPLE (in the current state) TO BE GIVEN TO ANY MEDICAL CARE PROFESSIONAL FOR DIAGNOSIS. 
+
+
 Thanks for looking at my code!
 -Caleb
